@@ -29,10 +29,10 @@ def plot_from_file(filename, title=None):
         print(f"{filename} не найден.")
     except Exception as e:
         print(f"произошла неизвестная ошибка")
-
-if len(sys.argv) < 2:
-    print("Напиши в консоль python ЗАДАНИЕ_2.py data.txt [Заголовок графика]")
-else:
-    filename = sys.argv[1]
-    title = sys.argv[2] if len(sys.argv) > 2 else None
-    plot_from_file(filename, title)
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print("Напиши в консоль python ЗАДАНИЕ_2.py data.txt Заголовокграфика ")
+    else:
+        filename = sys.argv[1]
+        title = sys.argv[2] if len(sys.argv) > 2 else None
+        plot_from_file(filename, title)
