@@ -15,7 +15,7 @@ def plot_from_file(filename, title=None):
                 x.append(x_val)
                 y.append(y_val)
             except ValueError:
-                print(f"{line} неправильно")
+                print(f"{line} ERROR")
 
         plt.plot(x, y)
         if title:
@@ -26,12 +26,12 @@ def plot_from_file(filename, title=None):
         plt.show()
 
     except FileNotFoundError:
-        print(f"{filename} не найден.")
+        print(f"{filename} NOT FOUND.")
     except Exception as e:
-        print(f"произошла неизвестная ошибка")
+        print(f"UN ERROR")
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Напиши в консоль python ЗАДАНИЕ_2.py data.txt Заголовокграфика ")
+        print("Write in console python zadanie_2.py data.txt titlegraph ")
     else:
         filename = sys.argv[1]
         title = sys.argv[2] if len(sys.argv) > 2 else None
