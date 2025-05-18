@@ -31,7 +31,7 @@ def plot_from_file(filename, title=None):
         print(f"UN ERROR")
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Write in console python zadanie_2.py data.txt titlegraph ")
+        print("Write in console python zadanie2.py data.txt titlegraph ")
     else:
         filename = sys.argv[1]
         title = sys.argv[2] if len(sys.argv) > 2 else None
